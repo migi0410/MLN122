@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quyền Lực Giỏ Hàng - Trang chủ</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 'montserrat': ['Montserrat', 'sans-serif'] },
+                    colors: {
+                        'dark-green': '#2f4841',
+                        'accent-yellow': '#f3b23a'
+                    }
+                }
+            }
+        }
+    </script>
+    
+</head>
+<body class="font-montserrat bg-[#f4f7f6] text-gray-800 text-left">
+
+    <header class="bg-white border-b border-gray-200 p-4 sticky top-0 z-50 shadow-md">
+        <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="text-dark-green text-xl font-bold no-underline">Quyền Lực Giỏ Hàng</a>
+            
+            <nav class="flex items-center gap-8">
+                <a href="index.html" class="no-underline text-accent-yellow font-bold transition-colors">Trang chủ</a>
+                <a href="theory.html" class="no-underline text-gray-800 font-medium hover:text-accent-yellow transition-colors">Lý thuyết</a>
+                <a href="game.html" class="no-underline text-gray-800 font-medium hover:text-accent-yellow transition-colors">Game "Đi chợ"</a>
+                <a href="quiz.html" class="no-underline text-gray-800 font-medium hover:text-accent-yellow transition-colors">Quiz - Bạn là ai?</a>
+                <a href="review.html" class="no-underline text-gray-800 font-medium hover:text-accent-yellow transition-colors">Quiz ôn tập</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="flex flex-col md:flex-row w-full min-h-[calc(100vh-73px)]">
+            <div class="flex-1 md:w-3/5 bg-dark-green text-white p-12 lg:p-24 flex flex-col justify-center">
+                <span class="block text-white opacity-80 text-sm font-medium mb-5 tracking-wider">Sản phẩm "QUYỀN LỰC GIỎ HÀNG"</span>
+                <p class="text-3xl font-medium text-white opacity-90 m-0 leading-snug">Bạn nghĩ ai đang nắm quyền?</p>
+                <h1 class="text-6xl font-black text-white my-3 leading-tight">
+                    <span class="text-accent-yellow">BẠN</span> hay <span class="text-accent-yellow whitespace-nowrap">THỊ TRƯỜNG?</span>
+                </h1>
+                <p class="text-lg leading-relaxed opacity-90 mb-10">Hãy tham gia bình chọn và khám phá xem bạn đang kiểm soát giỏ hàng hay bị giỏ hàng kiểm soát.</p>
+                <a href="#game-section" class="inline-block bg-accent-yellow text-dark-green py-4 px-8 rounded-md font-bold text-base no-underline transition-all max-w-xs text-center hover:bg-white hover:-translate-y-1 hover:shadow-lg">Khám phá ngay</a>
+            </div>
+
+            <div class="flex-1 md:w-2/5 flex justify-center items-center p-6 md:p-10">
+                <section class="bg-white p-10 md:p-12 rounded-lg shadow-2xl w-full max-w-lg text-center" id="poll-anchor">
+                    <div id="poll-section" class="poll-container">
+                        <div id="poll-options" class="flex flex-col sm:flex-row gap-5">
+                            <div id="vote-you" class="flex-1 p-8 border-2 border-accent-yellow rounded-lg cursor-pointer transition-all hover:bg-accent-yellow hover:text-dark-green hover:-translate-y-1">
+                                <h3 class="text-2xl font-bold mb-2.5">BẠN</h3>
+                                <p class="text-sm text-gray-500 m-0">Tôi hoàn toàn kiểm soát chi tiêu của mình.</p>
+                            </div>
+                            <div id="vote-market" class="flex-1 p-8 border-2 border-dark-green rounded-lg cursor-pointer transition-all hover:bg-dark-green hover:text-white hover:-translate-y-1">
+                                <h3 class="text-2xl font-bold mb-2.5">THỊ TRƯỜNG</h3>
+                                <p class="text-sm text-gray-500 m-0">Tôi thường bị quảng cáo dẫn dắt.</p>
+                            </div>
+                        </div>
+                        <div id="poll-results" class="hidden">
+                            <p class="text-xl font-bold my-5">Kết quả trực tiếp:</p>
+                            <div class="mb-5 text-left">
+                                <div class="text-base font-bold mb-2">BẠN (35%)</div>
+                                <div class="bg-gray-200 rounded-full h-3 overflow-hidden">
+                                    <div id="bar-you" class="bg-accent-yellow h-full rounded-full w-0 transition-[width] duration-1500 ease-in-out"></div>
+                                </div>
+                            </div>
+                            <div class="mb-5 text-left">
+                                <div class="text-base font-bold mb-2">THỊ TRƯỜNG (65%)</div>
+                                <div class="bg-gray-200 rounded-full h-3 overflow-hidden">
+                                    <div id="bar-market" class="bg-dark-green h-full rounded-full w-0 transition-[width] duration-1500 ease-in-out"></div>
+                                </div>
+                            </div>
+                            <p class="text-lg italic mt-8">65% người dùng nghĩ rằng họ đang bị thị trường điều khiển.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+        
+        <section id="game-section" class="bg-accent-yellow text-dark-green py-16 text-center">
+            <div class="max-w-3xl mx-auto px-6">
+                <h2 class="text-4xl sm:text-5xl font-black mb-4">Chúng ta thường nghĩ về "Thị trường" thế nào?</h2>
+                <p class="text-xl opacity-90 mt-4">
+                    Khi nói về 'thị trường', đa số chúng ta thường nghĩ theo 2 hướng:
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6 mb-8 text-2xl font-bold">
+                    <span class="text-blue-800 border-2 border-blue-800 px-4 py-2 rounded-lg bg-blue-100 shadow-md">Phe "Thượng đế"</span>
+                    <span class="text-dark-green opacity-70">VS</span>
+                    <span class="text-red-800 border-2 border-red-800 px-4 py-2 rounded-lg bg-red-100 shadow-md">Phe "Con rối"</span>
+                </div>
+                <p class="mt-4 text-lg opacity-90">
+                    Hãy tìm hiểu một vài từ khóa để hiểu hơn về hai phe này thông qua trò chơi bên dưới!
+                </p>
+            </div>
+        </section>
+
+        <section class="py-12 bg-white">
+            <div class="max-w-6xl mx-auto px-6">
+                <h2 class="text-3xl font-bold text-dark-green text-center">Giai đoạn 1: Ghép thẻ</h2>
+                <p class="text-center text-gray-600 mb-8">Nhấp vào một thẻ Tên, sau đó nhấp vào thẻ Định nghĩa tương ứng.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div id="term-cards" class="space-y-4">
+                        <h3 class="font-bold text-xl">THẺ TÊN</h3>
+                        <div id="term-1" class="game-card term p-4 bg-blue-100 border-2 border-blue-300 rounded-lg cursor-pointer hover:shadow-md" data-match="def-1">
+                            <h4 class="font-bold text-lg">Cung - Cầu</h4>
+                        </div>
+                        <div id="term-7" class="game-card term p-4 bg-red-100 border-2 border-red-300 rounded-lg cursor-pointer hover:shadow-md" data-match="def-7">
+                            <h4 class="font-bold text-lg">Hiệu ứng Mỏ neo (Anchoring)</h4>
+                        </div>
+                        <div id="term-2" class="game-card term p-4 bg-red-100 border-2 border-red-300 rounded-lg cursor-pointer hover:shadow-md" data-match="def-2">
+                            <h4 class="font-bold text-lg">Hiệu ứng mồi (Decoy Effect)</h4>
+                        </div>
+                        <div id="term-3" class="game-card term p-4 bg-blue-100 border-2 border-blue-300 rounded-lg cursor-pointer hover:shadow-md" data-match="def-3">
+                            <h4 class="font-bold text-lg">Bàn tay vô hình</h4>
+                        </div>
+                        <div id="term-5" class="game-card term p-4 bg-blue-100 border-2 border-blue-300 rounded-lg cursor-pointer hover:shadow-md" data-match="def-5">
+                            <h4 class="font-bold text-lg">Lựa chọn Hợp lý</h4>
+                        </div>
+                        <div id="term-4" class="game-card term p-4 bg-red-100 border-2 border-red-300 rounded-lg cursor-pointer hover:shadow-md" data-match="def-4">
+                            <h4 class="font-bold text-lg">FOMO</h4>
+                        </div>
+                        <div id="term-8" class="game-card term p-4 bg-blue-100 border-2 border-blue-300 rounded-lg cursor-pointer hover:shadow-md" data-match="def-8">
+                            <h4 class="font-bold text-lg">Chi phí cơ hội</h4>
+                        </div>
+                        <div id="term-6" class="game-card term p-4 bg-red-100 border-2 border-red-300 rounded-lg cursor-pointer hover:shadow-md" data-match="def-6">
+                            <h4 class="font-bold text-lg">Hiệu ứng Đám đông</h4>
+                        </div>
+                        
+                        <div class="bg-blue-50 p-4 rounded-lg mt-8 hidden">
+                            <h3 class="font-bold text-blue-800">Định nghĩa Phe 1 ("Thượng đế"):</h3>
+                            <p id="main-def-1" class="mt-2 text-gray-700 leading-relaxed">
+                                Lý thuyết này cho rằng người tiêu dùng nắm giữ quyền lực tối thượng. Mỗi đồng bạn chi tiêu là một "phiếu bầu". Thị trường sẽ tự điều chỉnh theo cung và cầu.
+                            </p>
+                        </div>
+                        <div class="bg-red-50 p-4 rounded-lg mt-4 hidden">
+                             <h3 class="font-bold text-red-800">Định nghĩa Phe 2 ("Con rối"):</h3>
+                            <p id="main-def-2" class="mt-2 text-gray-700 leading-relaxed">
+                                Lý thuyết này cho rằng lựa chọn của bạn không thật sự tự do. Chúng bị thao túng bởi marketing, hiệu ứng tâm lý và chủ nghĩa tiêu dùng.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div id="definition-cards" class="space-y-4">
+                        <h3 class="font-bold text-xl">THẺ ĐỊNH NGHĨA</h3>
+                        <div id="def-4" class="game-card def p-4 bg-gray-50 border-2 border-gray-300 rounded-lg cursor-pointer hover:shadow-md">
+                            <p>Nỗi sợ bỏ lỡ, lo lắng người khác đang có trải nghiệm tốt hơn mình.</p>
+                        </div>
+                        <div id="def-8" class="game-card def p-4 bg-gray-50 border-2 border-gray-300 rounded-lg cursor-pointer hover:shadow-md">
+                            <p>Giá trị của lựa chọn tốt nhất mà bạn bỏ qua khi đưa ra một quyết định.</p>
+                        </div>
+                        <div id="def-1" class="game-card def p-4 bg-gray-50 border-2 border-gray-300 rounded-lg cursor-pointer hover:shadow-md">
+                            <p>Giá cả được quyết định bởi sự cân bằng giữa số lượng người muốn mua và số lượng người muốn bán.</p>
+                        </div>
+                        <div id="def-3" class="game-card def p-4 bg-gray-50 border-2 border-gray-300 rounded-lg cursor-pointer hover:shadow-md">
+                            <p>Khi mọi người theo đuổi lợi ích cá nhân, họ vô tình thúc đẩy lợi ích chung của xã hội.</p>
+                        </div>
+                        <div id="def-6" class="game-card def p-4 bg-gray-50 border-2 border-gray-300 rounded-lg cursor-pointer hover:shadow-md">
+                            <p>Mua một món hàng hoặc làm theo một xu hướng chỉ vì thấy nhiều người khác cũng làm vậy.</p>
+                        </div>
+                        <div id="def-2" class="game-card def p-4 bg-gray-50 border-2 border-gray-300 rounded-lg cursor-pointer hover:shadow-md">
+                            <p>Đưa ra lựa chọn thứ 3 (mồi) để thúc đẩy bạn chọn lựa chọn mà họ muốn.</p>
+                        </div>
+                        <div id="def-7" class="game-card def p-4 bg-gray-50 border-2 border-gray-300 rounded-lg cursor-pointer hover:shadow-md">
+                            <p>Phụ thuộc quá nhiều vào thông tin đầu tiên (mỏ neo) nhận được.</p>
+                        </div>
+                        <div id="def-5" class="game-card def p-4 bg-gray-50 border-2 border-gray-300 rounded-lg cursor-pointer hover:shadow-md">
+                            <p>Người tiêu dùng luôn hành động lý trí, cân nhắc lợi ích/chi phí để tối đa hóa sự hài lòng của mình.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-gray-100">
+            <div class="max-w-6xl mx-auto px-6">
+                <h2 class="text-3xl font-bold text-dark-green text-center">Giai đoạn 2: Phân loại</h2>
+                <p class="text-center text-gray-600 mb-8">Kéo các thẻ đã ghép vào đúng phe của nó.</p>
+
+                <div id="merged-area" class="mt-8 text-center">
+                    <h3 class="font-bold text-xl text-dark-green">Thẻ đã ghép (Sẵn sàng để kéo)</h3>
+                    
+                    <div id="merged-1" class="merged-card hidden bg-green-100 border-2 border-green-400 p-4 rounded-lg shadow-lg cursor-grab my-4 text-left" draggable="true" data-phe="1">
+                        <h4 class="font-bold text-lg">Cung - Cầu</h4>
+                        <p class="text-sm">Giá cả được quyết định bởi sự cân bằng giữa số lượng người muốn mua và số lượng người muốn bán.</p>
+                    </div>
+                    <div id="merged-2" class="merged-card hidden bg-green-100 border-2 border-green-400 p-4 rounded-lg shadow-lg cursor-grab my-4 text-left" draggable="true" data-phe="2">
+                        <h4 class="font-bold text-lg">Hiệu ứng mồi (Decoy Effect)</h4>
+                        <p class="text-sm">Đưa ra lựa chọn thứ 3 (mồi) để thúc đẩy bạn chọn lựa chọn mà họ muốn.</p>
+                    </div>
+                    <div id="merged-3" class="merged-card hidden bg-green-100 border-2 border-green-400 p-4 rounded-lg shadow-lg cursor-grab my-4 text-left" draggable="true" data-phe="1">
+                        <h4 class="font-bold text-lg">Bàn tay vô hình</h4>
+                        <p class="text-sm">Khi mọi người theo đuổi lợi ích cá nhân, họ vô tình thúc đẩy lợi ích chung của xã hội.</p>
+                    </div>
+                    <div id="merged-4" class="merged-card hidden bg-green-100 border-2 border-green-400 p-4 rounded-lg shadow-lg cursor-grab my-4 text-left" draggable="true" data-phe="2">
+                        <h4 class="font-bold text-lg">FOMO</h4>
+                        <p class="text-sm">Nỗi sợ bỏ lỡ, lo lắng người khác đang có trải nghiệm tốt hơn mình.</p>
+                    </div>
+                    <div id="merged-5" class="merged-card hidden bg-green-100 border-2 border-green-400 p-4 rounded-lg shadow-lg cursor-grab my-4 text-left" draggable="true" data-phe="1">
+                        <h4 class="font-bold text-lg">Lựa chọn Hợp lý</h4>
+                        <p class="text-sm">Người tiêu dùng luôn hành động lý trí, cân nhắc lợi ích/chi phí để tối đa hóa sự hài lòng của mình.</p>
+                    </div>
+                    <div id="merged-6" class="merged-card hidden bg-green-100 border-2 border-green-400 p-4 rounded-lg shadow-lg cursor-grab my-4 text-left" draggable="true" data-phe="2">
+                        <h4 class="font-bold text-lg">Hiệu ứng Đám đông</h4>
+                        <p class="text-sm">Mua một món hàng hoặc làm theo một xu hướng chỉ vì thấy nhiều người khác cũng làm vậy.</p>
+                    </div>
+                    <div id="merged-7" class="merged-card hidden bg-green-100 border-2 border-green-400 p-4 rounded-lg shadow-lg cursor-grab my-4 text-left" draggable="true" data-phe="2">
+                        <h4 class="font-bold text-lg">Hiệu ứng Mỏ neo (Anchoring)</h4>
+                        <p class="text-sm">Phụ thuộc quá nhiều vào thông tin đầu tiên (mỏ neo) nhận được.</p>
+                    </div>
+                    <div id="merged-8" class="merged-card hidden bg-green-100 border-2 border-green-400 p-4 rounded-lg shadow-lg cursor-grab my-4 text-left" draggable="true" data-phe="1">
+                        <h4 class="font-bold text-lg">Chi phí cơ hội</h4>
+                        <p class="text-sm">Giá trị của lựa chọn tốt nhất mà bạn bỏ qua khi đưa ra một quyết định.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                    <div id="dropzone-phe1" class="drop-zone bg-blue-50 border-4 border-dashed border-blue-300 rounded-lg min-h-[300px] p-6" data-phe="1">
+                        <h3 class="text-2xl font-bold text-blue-800 text-center">PHE 1: "Thượng đế"</h3>
+                        <p id="desc-phe1" class="text-center text-blue-600 transition-all duration-300">
+                            (Kéo các lý thuyết về "Người tiêu dùng nắm quyền" vào đây)
+                        </p>
+                    </div>
+                    
+                    <div id="dropzone-phe2" class="drop-zone bg-red-50 border-4 border-dashed border-red-300 rounded-lg min-h-[300px] p-6" data-phe="2">
+                        <h3 class="text-2xl font-bold text-red-800 text-center">PHE 2: "Con rối"</h3>
+                        <p id="desc-phe2" class="text-center text-red-600 transition-all duration-300">
+                            (Kéo các lý thuyết về "Thị trường thao túng" vào đây)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main> <div id="error-modal" class="hidden fixed inset-0 z-50 items-center justify-center">
+        <div id="modal-overlay" class="absolute inset-0 bg-gray-900 opacity-75"></div>
+        <div class="relative bg-white rounded-lg shadow-xl w-full max-w-sm p-6 text-center">
+            <h3 class="text-2xl font-bold text-dark-green">Thông báo</h3>
+            <p id="modal-message" class="my-4 text-gray-700">Đây là nội dung lỗi.</p>
+            <button id="modal-close-btn" class="bg-accent-yellow text-dark-green font-bold py-2 px-6 rounded-md hover:bg-yellow-500 transition-colors">
+                Đã hiểu
+            </button>
+        </div>
+    </div>
+    
+    <div id="completion-modal" class="hidden fixed inset-0 z-50 items-center justify-center p-4">
+    <div id="completion-overlay" class="absolute inset-0 bg-gray-900 opacity-75"></div>
+    
+    <div class="relative bg-white rounded-lg shadow-xl w-full max-w-lg p-8 text-center">
+        <h3 class="text-3xl font-bold text-dark-green">Chúc mừng!</h3>
+        
+        <p id="completion-message" class="my-6 text-gray-700 text-center leading-relaxed text-lg">
+            Bạn đã phân loại xong các lý thuyết kinh tế hiện đại.
+            <br/><br/>
+            ...<strong>Tuy nhiên</strong>, dưới góc nhìn của <strong>Kinh tế chính trị Mác-Lênin</strong>, cách đặt vấn đề này chưa đi vào bản chất. Để hiểu thị trường, trước hết chúng ta phải hiểu <strong>'Hàng hoá, thị trường và vai trò của các chủ thể tham gia thị trường'</strong>. 
+            <br/><br/>
+            Và đó chính là nội dung của <strong>Chương 2</strong>.
+        </p>
+        
+        <div class="mt-6 flex flex-col sm:flex-row sm:justify-center gap-4">
+            <button id="completion-learn-more-btn" class="bg-dark-green text-white font-bold py-3 px-8 rounded-md hover:bg-gray-700 transition-colors">
+                Tìm hiểu ngay
+            </button>
+            <button id="completion-close-btn" class="text-gray-500 font-medium py-3 px-6 rounded-md hover:bg-gray-100 transition-colors">
+                Đóng
+            </button>
+        </div>
+    </div>
+</div>
+
+    <footer class="bg-dark-green py-8">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <p class="text-gray-300 text-sm text-center">
+                Sản phẩm sáng tạo MLN122 - MC1805 - Group 3 (Hồng Hà - Minh Dũng - Lê Khang - Phạm Lâu - Việt Cường)<br/>
+                Đại học FPT TP.HCM &copy; 2025. All rights reserved.
+            </p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

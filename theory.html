@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chương 2 (Mục lục) - Quyền Lực Giỏ Hàng</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 'montserrat': ['Montserrat', 'sans-serif'] },
+                    colors: {
+                        'dark-green': '#2f4841',
+                        'accent-yellow': '#f3b23a'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    </head>
+<body class="font-montserrat bg-gray-100 text-gray-800 text-left">
+
+    <header class="bg-white border-b border-gray-200 p-4 sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="text-dark-green text-xl font-bold no-underline">Quyền Lực Giỏ Hàng</a>
+            <nav class="flex items-center gap-8">
+                <a href="index.html" class="no-underline text-gray-800 font-medium hover:text-accent-yellow transition-colors">Trang chủ</a>
+                <a href="theory.html" class="no-underline text-accent-yellow font-bold transition-colors">Lý thuyết</a>
+                <a href="game.html" class="no-underline text-gray-800 font-medium hover:text-accent-yellow transition-colors">Game "Đi chợ"</a>
+                <a href="quiz.html" class="no-underline text-gray-800 font-medium hover:text-accent-yellow transition-colors">Quiz - Bạn là ai?</a>
+                <a href="review.html" class="no-underline text-gray-800 font-medium hover:text-accent-yellow transition-colors">Quiz ôn tập</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-7xl w-full mx-auto py-12 px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+
+            <aside class="md:col-span-1">
+                <div class="sticky top-28">
+                    <h3 class="text-xl font-bold text-dark-green mb-4">Mục lục Chương 2</h3>
+                    <ul class="space-y-1">
+                        <li>
+                            <button class="toc-toggle flex justify-between items-center w-full p-2 rounded-md font-semibold text-left hover:bg-gray-200">
+                                I. Hàng hoá
+                                <svg class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </button>
+                            <ul class="toc-children hidden ml-4 mt-1 space-y-1 border-l-2 border-gray-300">
+                                <li><button class="toc-leaf w-full text-left p-2 pl-4 rounded-md hover:bg-gray-200" data-target="content-1-1">Khái niệm Hàng hóa</button></li>
+                                <li>
+                                    <button class="toc-toggle flex justify-between items-center w-full p-2 pl-4 rounded-md font-medium text-left hover:bg-gray-200">Hai thuộc tính<svg class="w-4 h-4 transition-transform" ...></svg></button>
+                                    <ul class="toc-children hidden ml-4 mt-1 space-y-1 border-l-2 border-gray-300">
+                                        <li><button class="toc-leaf w-full text-left p-2 pl-4 rounded-md hover:bg-gray-200" data-target="content-1-2-1">Giá trị sử dụng</button></li>
+                                        <li><button class="toc-leaf w-full text-left p-2 pl-4 rounded-md hover:bg-gray-200" data-target="content-1-2-2">Giá trị</button></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <button class="toc-toggle flex justify-between items-center w-full p-2 pl-4 rounded-md font-medium text-left hover:bg-gray-200">Tính hai mặt của lao động<svg class="w-4 h-4 transition-transform" ...></svg></button>
+                                    <ul class="toc-children hidden ml-4 mt-1 space-y-1 border-l-2 border-gray-300">
+                                        <li><button class="toc-leaf w-full text-left p-2 pl-4 rounded-md hover:bg-gray-200" data-target="content-1-3-1">Lao động cụ thể</button></li>
+                                        <li><button class="toc-leaf w-full text-left p-2 pl-4 rounded-md hover:bg-gray-200" data-target="content-1-3-2">Lao động trừu tượng</button></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <button class="toc-toggle flex justify-between items-center w-full p-2 pl-4 rounded-md font-medium text-left hover:bg-gray-200">Lượng giá trị<svg class="w-4 h-4 transition-transform" ...></svg></button>
+                                    <ul class="toc-children hidden ml-4 mt-1 space-y-1 border-l-2 border-gray-300">
+                                        <li><button class="toc-leaf w-full text-left p-2 pl-4 rounded-md hover:bg-gray-200" data-target="content-1-4-1">Thước đo lượng giá trị</button></li>
+                                        <li><button class="toc-leaf w-full text-left p-2 pl-4 rounded-md hover:bg-gray-200" data-target="content-1-4-2">Các nhân tố ảnh hưởng</button></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <li>
+                            <button class="toc-toggle flex justify-between items-center w-full p-2 rounded-md font-semibold text-left hover:bg-gray-200">
+                                II. Tiền tệ
+                                <svg class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </button>
+                            <ul class="toc-children hidden ml-4 mt-1 space-y-1 border-l-2 border-gray-300">
+                                <li><button class="toc-leaf w-full text-left p-2 pl-4 rounded-md hover:bg-gray-200" data-target="content-2-1">Nguồn gốc và Bản chất</button></li>
+                                <li>
+                                    <button class="toc-toggle flex justify-between items-center w-full p-2 pl-4 rounded-md font-medium text-left hover:bg-gray-200">Các chức năng<svg class="w-4 h-4 transition-transform" ...></svg></button>
+                                    <ul class="toc-children hidden ml-4 mt-1 space-y-1 border-l-2 border-gray-300">
+                                        <li><button class="toc-leaf w-full text-left p-2 pl-4 rounded-md hover:bg-gray-200" data-target="content-2-2-1">Thước đo giá trị</button></li>
+                                        <li><button class="toc-leaf w-full text-left p-2 pl-4 rounded-md hover:bg-gray-200" data-target="content-2-2-2">Phương tiện lưu thông</button></li>
+                                        <li><button class="toc-leaf w-full text-left p-2 pl-4 rounded-md hover:bg-gray-200" data-target="content-2-2-3">Phương tiện cất trữ</button></li>
+                                        <li><button class="toc-leaf w-full text-left p-2 pl-4 rounded-md hover:bg-gray-200" data-target="content-2-2-4">Phương tiện thanh toán</button></li>
+                                        <li><button class="toc-leaf w-full text-left p-2 pl-4 rounded-md hover:bg-gray-200" data-target="content-2-2-5">Tiền tệ thế giới</button></li>
+                                    </ul>
+                                </li>
+                                <li><button class="toc-leaf w-full text-left p-2 pl-4 rounded-md hover:bg-gray-200" data-target="content-2-3">Quy luật lưu thông tiền tệ</button></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <button class="toc-toggle flex justify-between items-center w-full p-2 rounded-md font-semibold text-left hover:bg-gray-200">
+                                III. Thị trường
+                                <svg class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </button>
+                            <ul class="toc-children hidden ml-4 mt-1 space-y-1 border-l-2 border-gray-300">
+                                <li><button class="toc-leaf w-full text-left p-2 pl-4 rounded-md hover:bg-gray-200" data-target="content-3-1">Khái niệm & Chức năng</button></li>
+                                <li><button class="toc-leaf w-full text-left p-2 pl-4 rounded-md hover:bg-gray-200" data-target="content-3-2">Cơ chế thị trường</button></li>
+                                <li>
+                                    <button class="toc-toggle flex justify-between items-center w-full p-2 pl-4 rounded-md font-medium text-left hover:bg-gray-200">Các quy luật kinh tế<svg class="w-4 h-4 transition-transform" ...></svg></button>
+                                    <ul class="toc-children hidden ml-4 mt-1 space-y-1 border-l-2 border-gray-300">
+                                        <li><button class="toc-leaf w-full text-left p-2 pl-4 rounded-md hover:bg-gray-200" data-target="content-3-3-1">Quy luật Giá trị</button></li>
+                                        <li><button class="toc-leaf w-full text-left p-2 pl-4 rounded-md hover:bg-gray-200" data-target="content-3-3-2">Quy luật Cung - Cầu</button></li>
+                                        <li><button class="toc-leaf w-full text-left p-2 pl-4 rounded-md hover:bg-gray-200" data-target="content-3-3-3">Quy luật Cạnh tranh</button></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <button class="toc-toggle flex justify-between items-center w-full p-2 pl-4 rounded-md font-medium text-left hover:bg-gray-200">Vai trò các chủ thể<svg class="w-4 h-4 transition-transform" ...></svg></button>
+                                    <ul class="toc-children hidden ml-4 mt-1 space-y-1 border-l-2 border-gray-300">
+                                        <li><button class="toc-leaf w-full text-left p-2 pl-4 rounded-md hover:bg-gray-200" data-target="content-3-4-1">Người sản xuất</button></li>
+                                        <li><button class="toc-leaf w-full text-left p-2 pl-4 rounded-md hover:bg-gray-200" data-target="content-3-4-2">Người tiêu dùng</button></li>
+                                        <li><button class="toc-leaf w-full text-left p-2 pl-4 rounded-md hover:bg-gray-200" data-target="content-3-4-3">Chủ thể trung gian</button></li>
+                                        <li><button class="toc-leaf w-full text-left p-2 pl-4 rounded-md hover:bg-gray-200" data-target="content-3-4-4">Nhà nước</button></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+
+            <div class="md:col-span-3">
+                <div id="content-display" class="relative bg-white p-8 rounded-lg shadow-lg min-h-[70vh]">
+                    
+                    <div id="content-placeholder" class="text-center text-gray-400 p-10 flex flex-col items-center justify-center h-full">
+                        <svg class="w-24 h-24 text-gray-300 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                        <h2 class="text-2xl font-bold text-dark-green mb-4">Chào mừng đến với Chương 2</h2>
+                        <p class="text-lg">Vui lòng chọn một mục từ cây mục lục bên trái để xem nội dung chi tiết.</p>
+                    </div>
+
+                    <div id="content-1-1" class="content-panel hidden">
+                        <h2 class="text-3xl font-bold text-dark-green border-b-2 border-accent-yellow pb-2 mb-4">Khái niệm Hàng hóa</h2>
+                        <p class="text-lg text-gray-700 leading-relaxed"><strong>Hàng hóa</strong> là sản phẩm của lao động, có thể thỏa mãn nhu cầu nào đó của con người thông qua trao đổi, mua bán.</p>
+                        <img src="assets/hanghoa.png" alt="Ví dụ về hàng hóa" class="w-2/3 md:w-1/2 h-auto mx-auto rounded-lg mt-6 shadow-md">
+                    </div>
+                    <div id="content-1-2-1" class="content-panel hidden">
+                        <h3 class="text-3xl font-bold text-dark-green border-b-2 border-accent-yellow pb-2 mb-4">Giá trị sử dụng</h3>
+                        <p class="text-lg text-gray-700 leading-relaxed mb-4">Là <strong>công dụng</strong> của vật phẩm, có khả năng thỏa mãn một nhu cầu nào đó của con người (ví dụ: gạo để ăn, áo để mặc).</p>
+                        <img src="assets/giatrisudung.png" alt="Giá trị sử dụng" class="w-2/3 md:w-1/2 h-auto mx-auto rounded-lg mt-6 shadow-md">
+                    </div>
+                    <div id="content-1-2-2" class="content-panel hidden">
+                        <h3 class="text-3xl font-bold text-dark-green border-b-2 border-accent-yellow pb-2 mb-4">Giá trị</h3>
+                        <p class="text-lg text-gray-700 leading-relaxed">Là <strong>lao động xã hội</strong> của người sản xuất hàng hóa kết tinh trong hàng hóa đó. Đây là cơ sở để các hàng hóa trao đổi với nhau theo một tỷ lệ nhất định.</p>
+                        <img src="assets/giatri.png" alt="Giá trị" class="w-2/3 md:w-1/2 h-auto mx-auto rounded-lg mt-6 shadow-md">
+                    </div>
+                    <div id="content-1-3-1" class="content-panel hidden">
+                        <h3 class="text-3xl font-bold text-dark-green border-b-2 border-accent-yellow pb-2 mb-4">Lao động cụ thể</h3>
+                        <p class="text-lg text-gray-700 leading-relaxed mb-4">Là lao động có ích dưới một <strong>hình thức nghề nghiệp chuyên môn cụ thể</strong> (ví dụ: lao động của thợ may, thợ mộc).</p>
+                        <p class="text-lg text-gray-700 leading-relaxed font-semibold">Lao động cụ thể tạo ra <strong class="text-blue-600">giá trị sử dụng</strong> của hàng hóa.</p>
+                        <img src="assets/laodongcuthe.png" alt="Lao động cụ thể" class="w-2/3 md:w-1/2 h-auto mx-auto rounded-lg mt-6 shadow-md">
+                    </div>
+                    <div id="content-1-3-2" class="content-panel hidden">
+                        <h3 class="text-3xl font-bold text-dark-green border-b-2 border-accent-yellow pb-2 mb-4">Lao động trừu tượng</h3>
+                        <p class="text-lg text-gray-700 leading-relaxed mb-4">Là sự <strong>hao phí sức lao động</strong> (thần kinh, cơ bắp) của người sản xuất hàng hóa nói chung, không kể hình thức cụ thể.</p>
+                        <p class="text-lg text-gray-700 leading-relaxed font-semibold">Lao động trừu tượng tạo ra <strong class="text-red-600">giá trị</strong> của hàng hóa.</p>
+                        <img src="assets/laodongtruutuong.png" alt="Lao động trừu tượng" class="w-2/3 md:w-1/2 h-auto mx-auto rounded-lg mt-6 shadow-md">
+                    </div>
+                    <div id="content-1-4-1" class="content-panel hidden">
+                        <h3 class="text-3xl font-bold text-dark-green border-b-2 border-accent-yellow pb-2 mb-4">Thước đo lượng giá trị</h3>
+                        <p class="text-lg text-gray-700 leading-relaxed mb-4">Lượng giá trị của hàng hóa được đo bằng <strong>Thời gian lao động xã hội cần thiết</strong>.</p>
+                        <p class="text-lg text-gray-700 leading-relaxed">Đây là thời gian cần thiết để sản xuất ra hàng hóa trong điều kiện bình thường của xã hội, với trình độ kỹ thuật, trình độ thành thạo và cường độ lao động trung bình.</p>
+                    </div>
+                    <div id="content-1-4-2" class="content-panel hidden">
+                        <h3 class="text-3xl font-bold text-dark-green border-b-2 border-accent-yellow pb-2 mb-4">Các nhân tố ảnh hưởng</h3>
+                        <ul class="space-y-3 mt-4 text-lg">
+                            <li class="flex"><svg class="w-5 h-5 text-accent-yellow mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span class="text-gray-700"><strong>Năng suất lao động:</strong> Tăng năng suất <strong>làm giảm</strong> lượng giá trị của 1 đơn vị.</span></li>
+                            <li class="flex"><svg class="w-5 h-5 text-accent-yellow mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span class="text-gray-700"><strong>Cường độ lao động:</strong> Tăng cường độ <strong>không đổi</strong> lượng giá trị của 1 đơn vị.</span></li>
+                            <li class="flex"><svg class="w-5 h-5 text-accent-yellow mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span class="text-gray-700"><strong>Mức độ phức tạp:</strong> Lao động phức tạp tạo ra <strong>nhiều giá trị hơn</strong> lao động giản đơn.</span></li>
+                        </ul>
+                    </div>
+
+                    <div id="content-2-1" class="content-panel hidden">
+                        <h2 class="text-3xl font-bold text-dark-green border-b-2 border-accent-yellow pb-2 mb-4">Nguồn gốc và Bản chất của Tiền tệ</h2>
+                        <p class="text-lg text-gray-700 leading-relaxed mb-4"><strong>Nguồn gốc:</strong> Tiền tệ là kết quả của quá trình phát triển lâu dài của sản xuất và trao đổi hàng hóa, trải qua 4 hình thái giá trị (ngẫu nhiên, mở rộng, chung, tiền).</p>
+                        <p class="text-lg text-gray-700 leading-relaxed"><strong>Bản chất:</strong> Tiền tệ là một loại hàng hóa đặc biệt, đóng vai trò là vật ngang giá chung, thể hiện lao động xã hội và biểu thị quan hệ sản xuất giữa những người sản xuất hàng hóa.</p>
+                    </div>
+                    <div id="content-2-2-1" class="content-panel hidden"><h3 class="text-3xl font-bold text-dark-green border-b-2 border-accent-yellow pb-2 mb-4">Chức năng: Thước đo giá trị</h3><p class="text-lg text-gray-700 leading-relaxed">Dùng để đo lường và biểu hiện giá trị của các hàng hóa khác (<strong>giá cả</strong>).</p>
+                        <img src="assets/thuocdogiatri.png" alt="Thước đo lượng giá trị" class="w-2/3 md:w-1/2 h-auto mx-auto rounded-lg mt-6 shadow-md">
+                    </div>
+                    <div id="content-2-2-2" class="content-panel hidden"><h3 class="text-3xl font-bold text-dark-green border-b-2 border-accent-yellow pb-2 mb-4">Chức năng: Phương tiện lưu thông</h3><p class="text-lg text-gray-700 leading-relaxed">Môi giới cho quá trình trao đổi hàng hóa (H-T-H).</p>
+                        <img src="assets/luuthong.png" alt="Phương tiện lưu thông" class="w-2/3 md:w-1/2 h-auto mx-auto rounded-lg mt-6 shadow-md">
+                    </div>
+                    <div id="content-2-2-3" class="content-panel hidden"><h3 class="text-3xl font-bold text-dark-green border-b-2 border-accent-yellow pb-2 mb-4">Chức năng: Phương tiện cất trữ</h3><p class="text-lg text-gray-700 leading-relaxed">Tiền được rút khỏi lưu thông và cất trữ lại (thường là vàng hoặc tiền có giá trị ổn định).</p>
+                        <img src="assets/cattru.png" alt="Phương tiện cất trữ" class="w-2/3 md:w-1/2 h-auto mx-auto rounded-lg mt-6 shadow-md">
+                    </div>
+                    <div id="content-2-2-4" class="content-panel hidden"><h3 class="text-3xl font-bold text-dark-green border-b-2 border-accent-yellow pb-2 mb-4">Chức năng: Phương tiện thanh toán</h3><p class="text-lg text-gray-700 leading-relaxed">Dùng để chi trả sau khi giao dịch, mua bán đã hoàn thành (trả nợ, nộp thuế...).</p>
+                        <img src="assets/thanhtoan.png" alt="Phương tiện thanh toán" class="w-2/3 md:w-1/2 h-auto mx-auto rounded-lg mt-6 shadow-md">
+                    </div>
+                    <div id="content-2-2-5" class="content-panel hidden"><h3 class="text-3xl font-bold text-dark-green border-b-2 border-accent-yellow pb-2 mb-4">Chức năng: Tiền tệ thế giới</h3><p class="text-lg text-gray-700 leading-relaxed">Tiền thực hiện vai trò vật ngang giá chung trong quan hệ kinh tế giữa các quốc gia.</p>
+                        <img src="assets/tientethegioi.png" alt="Tiền tệ thế giới" class="w-2/3 md:w-1/2 h-auto mx-auto rounded-lg mt-6 shadow-md">
+                    </div>
+                    <div id="content-2-3" class="content-panel hidden">
+                        <h2 class="text-3xl font-bold text-dark-green border-b-2 border-accent-yellow pb-2 mb-4">Quy luật lưu thông tiền tệ</h2>
+                        <p class="text-lg text-gray-700 leading-relaxed mb-4">Xác định số lượng tiền cần thiết cho việc lưu thông hàng hóa trong một thời kỳ nhất định.</p>
+                        <blockquote class="bg-gray-100 p-4 rounded-lg text-xl font-semibold text-center my-4 text-dark-green">
+                            M = (P x Q) / V
+                        </blockquote>
+                        <p class="text-lg text-gray-700 leading-relaxed mb-4">Nếu nhà nước phát hành tiền giấy vượt quá số lượng M, giá trị của đồng tiền sẽ bị giảm sút, dẫn đến hiện tượng <strong>lạm phát</strong>.</p>
+                        <img src="assets/lamphat.png" alt="Quy luật lưu thông tiền tệ" class="w-2/3 md:w-1/2 h-auto mx-auto rounded-lg mt-6 shadow-md">
+                    </div>
+
+                    <div id="content-3-1" class="content-panel hidden">
+                        <h2 class="text-3xl font-bold text-dark-green border-b-2 border-accent-yellow pb-2 mb-4">Khái niệm & Chức năng Thị trường</h2>
+                        <p class="text-lg text-gray-700 leading-relaxed mb-4"><strong>Khái niệm:</strong> Thị trường là tổng hòa các mối quan hệ (cung, cầu, giá cả, cạnh tranh...) liên quan đến việc trao đổi, mua bán hàng hóa, dịch vụ.</p>
+                        <p class="text-lg text-gray-700 leading-relaxed font-semibold">Các chức năng chính:</p>
+                        <ul class="space-y-3 mt-4 text-lg">
+                            <li class="flex"><svg class="w-5 h-5 text-accent-yellow mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span class="text-gray-700">Chức năng thực hiện (thừa nhận) giá trị.</span></li>
+                            <li class="flex"><svg class="w-5 h-5 text-accent-yellow mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span class="text-gray-700">Chức năng thông tin.</span></li>
+                            <li class="flex"><svg class="w-5 h-5 text-accent-yellow mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span class="text-gray-700">Chức năng điều tiết, kích thích hoặc hạn chế.</span></li>
+                        </ul>
+                    </div>
+                    <div id="content-3-2" class="content-panel hidden">
+                        <h2 class="text-3xl font-bold text-dark-green border-b-2 border-accent-yellow pb-2 mb-4">Cơ chế thị trường</h2>
+                        <p class="text-lg text-gray-700 leading-relaxed mb-4"><strong>Cơ chế thị trường:</strong> Là hệ thống các quan hệ kinh tế mang tính tự điều chỉnh, tuân theo yêu cầu của các quy luật kinh tế khách quan.</p>
+                        <p class="text-lg text-gray-700 leading-relaxed"><strong>Nền kinh tế thị trường:</strong> Là nền kinh tế được vận hành chủ yếu theo cơ chế thị trường.</p>
+                    </div>
+                    <div id="content-3-3-1" class="content-panel hidden">
+                        <h3 class="text-3xl font-bold text-dark-green border-b-2 border-accent-yellow pb-2 mb-4">Quy luật Giá trị</h3>
+                        <p class="text-lg text-gray-700 leading-relaxed mb-4"><strong>Nội dung:</strong> Yêu cầu sản xuất và trao đổi phải dựa trên cơ sở <strong>hao phí lao động xã hội cần thiết</strong> (trao đổi ngang giá).</p>
+                        <p class="text-lg text-gray-700 leading-relaxed font-semibold">Tác động:</p>
+                        <ul class="space-y-3 mt-4 text-lg">
+                            <li class="flex"><svg class="w-5 h-5 text-accent-yellow mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span class="text-gray-700">Điều tiết sản xuất và lưu thông.</span></li>
+                            <li class="flex"><svg class="w-5 h-5 text-accent-yellow mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span class="text-gray-700">Kích thích cải tiến kỹ thuật.</span></li>
+                            <li class="flex"><svg class="w-5 h-5 text-accent-yellow mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span class="text-gray-700">Phân hóa giàu – nghèo.</span></li>
+                        </ul>
+                    </div>
+                    <div id="content-3-3-2" class="content-panel hidden">
+                        <h3 class="text-3xl font-bold text-dark-green border-b-2 border-accent-yellow pb-2 mb-4">Quy luật Cung – Cầu</h3>
+                        <p class="text-lg text-gray-700 leading-relaxed mb-4">Là mối quan hệ tác động lẫn nhau giữa cung và cầu để quyết định giá cả thị trường.</p>
+                        <ul class="space-y-3 mt-4 text-lg">
+                            <li class="flex"><svg class="w-5 h-5 text-accent-yellow mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span><strong>Cung > Cầu</strong> &rarr; Giá cả giảm (< Giá trị).</span></li>
+                            <li class="flex"><svg class="w-5 h-5 text-accent-yellow mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span><strong>Cung < Cầu</strong> &rarr; Giá cả tăng (> Giá trị).</span></li>
+                            <li class="flex"><svg class="w-5 h-5 text-accent-yellow mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span><strong>Cung = Cầu</strong> &rarr; Giá cả = Giá trị.</span></li>
+                        </ul>
+                    </div>
+                    <div id="content-3-3-3" class="content-panel hidden">
+                        <h3 class="text-3xl font-bold text-dark-green border-b-2 border-accent-yellow pb-2 mb-4">Quy luật Cạnh tranh</h3>
+                        <p class="text-lg text-gray-700 leading-relaxed mb-4">Là quy luật thể hiện sự ganh đua kinh tế giữa các chủ thể nhằm giành được ưu thế.</p>
+                        <p class="text-lg text-gray-700 leading-relaxed font-semibold">Tác động:</p>
+                        <ul class="space-y-3 mt-4 text-lg">
+                            <li class="flex"><svg class="w-5 h-5 text-accent-yellow mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span><strong>Tích cực:</strong> Thúc đẩy cải tiến kỹ thuật, nâng cao chất lượng.</span></li>
+                            <li class="flex"><svg class="w-5 h-5 text-accent-yellow mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg><span><strong>Tiêu cực:</strong> Cạnh tranh không lành mạnh, lãng phí, phân hóa, độc quyền.</span></li>
+                        </ul>
+                    </div>
+                    <div id="content-3-4-1" class="content-panel hidden"><h3 class="text-3xl font-bold text-dark-green border-b-2 border-accent-yellow pb-2 mb-4">Vai trò: Người sản xuất (Doanh nghiệp)</h3><p class="text-lg text-gray-700 leading-relaxed">Trực tiếp tạo ra hàng hóa, dịch vụ. Mục đích: <strong>Tối đa hóa lợi nhuận</strong>.</p>
+                        <img src="assets/doanhnghiep.png" alt="Vai trò doanh nghiệp" class="w-2/3 md:w-1/2 h-auto mx-auto rounded-lg mt-6 shadow-md">
+                    </div>
+                    <div id="content-3-4-2" class="content-panel hidden"><h3 class="text-3xl font-bold text-dark-green border-b-2 border-accent-yellow pb-2 mb-4">Vai trò: Người tiêu dùng (Hộ gia đình)</h3><p class="text-lg text-gray-700 leading-relaxed">Mua hàng hóa, dịch vụ để thỏa mãn nhu cầu. Mục đích: <strong>Tối đa hóa lợi ích</strong> (giá trị sử dụng).</p>
+                        <img src="assets/nguoitieudung.png" alt="Vai trò người tiêu dùng" class="w-2/3 md:w-1/2 h-auto mx-auto rounded-lg mt-6 shadow-md">
+                    </div>
+                    <div id="content-3-4-3" class="content-panel hidden"><h3 class="text-3xl font-bold text-dark-green border-b-2 border-accent-yellow pb-2 mb-4">Vai trò: Các chủ thể trung gian</h3><p class="text-lg text-gray-700 leading-relaxed">Môi giới, kết nối cung và cầu (ví dụ: thương nhân, ngân hàng).</p>
+                        <img src="assets/bank.jpg" alt="Vai trò chủ thể trung gian" class="w-2/3 md:w-1/2 h-auto mx-auto rounded-lg mt-6 shadow-md">
+                    </div>
+                    <div id="content-3-4-4" class="content-panel hidden"><h3 class="text-3xl font-bold text-dark-green border-b-2 border-accent-yellow pb-2 mb-4">Vai trò: Nhà nước</h3><p class="text-lg text-gray-700 leading-relaxed">Quản lý, điều tiết nền kinh tế vĩ mô, khắc phục các khuyết tật của thị trường, đảm bảo công bằng xã hội.</p>
+                        <img src="assets/nhanuoc.jpg" alt="Vai trò nhà nước" class="w-2/3 md:w-1/2 h-auto mx-auto rounded-lg mt-6 shadow-md">
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="bg-dark-green py-8">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <p class="text-gray-300 text-sm text-center">
+                Sản phẩm sáng tạo MLN122 - MC1805 - Group 3 (Hồng Hà - Minh Dũng - Lê Khang - Phạm Lâu - Việt Cường)<br/>
+                Đại học FPT TP.HCM &copy; 2025. All rights reserved.
+            </p>
+        </div>
+    </footer>
+    
+    <script src="theory-nav.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game "Một ngày đi chợ" - Quyền Lực Giỏ Hàng</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 'montserrat': ['Montserrat', 'sans-serif'] },
+                    colors: {
+                        'dark-green': '#2f4841',
+                        'accent-yellow': '#f3b23a'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .product-tag {
+            position: absolute;
+            top: 12px;
+            left: -8px;
+            padding: 4px 12px 4px 8px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: #111;
+            background-color: #fde047; /* Tailwind yellow-400 */
+            border-radius: 0 4px 4px 0;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            z-index: 10;
+        }
+        .product-tag-fomo {
+            background-color: #ef4444; /* Tailwind red-500 */
+            color: white;
+            left: -10px;
+            transform: rotate(-5deg);
+        }
+    </style>
+</head>
+<body class="font-montserrat bg-gray-100 text-gray-800 text-left">
+
+    <header class="bg-white border-b border-gray-200 p-4 sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="text-dark-green text-xl font-bold no-underline">Quyền Lực Giỏ Hàng</a>
+            <nav class="flex items-center gap-8">
+                <a href="index.html" class="no-underline text-gray-800 font-medium hover:text-accent-yellow transition-colors">Trang chủ</a>
+                <a href="theory.html" class="no-underline text-gray-800 font-medium hover:text-accent-yellow transition-colors">Lý thuyết</a>
+                <a href="game.html" class="no-underline text-accent-yellow font-bold transition-colors">Game "Đi chợ"</a>
+                <a href="quiz.html" class="no-underline text-gray-800 font-medium hover:text-accent-yellow transition-colors">Quiz - Bạn là ai?</a>
+                <a href="review.html" class="no-underline text-gray-800 font-medium hover:text-accent-yellow transition-colors">Quiz ôn tập</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-7xl w-full mx-auto py-12 px-6">
+        <div class="text-center mb-12">
+            <h1 class="text-5xl font-black text-dark-green">Game "Một ngày đi chợ"</h1>
+            <p class="text-xl text-gray-600 mt-4 max-w-2xl mx-auto">Ngân sách: 500.000 VNĐ. Hãy mua đủ đồ trong danh sách và chống lại các "bẫy"!</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            
+            <aside class="lg:col-span-1 lg:sticky lg:top-28 h-fit">
+                <div class="bg-white p-6 rounded-lg shadow-lg mb-6">
+                    <h3 class="text-sm font-bold text-gray-500 uppercase">Ngân sách còn lại</h3>
+                    <p id="budget-display" class="text-4xl font-extrabold text-dark-green">500.000 <span class="text-2xl">VNĐ</span></p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-lg mb-6">
+                    <h3 class="text-lg font-bold text-dark-green mb-1">Mục tiêu</h3>
+                    <p class="text-sm text-gray-500 mb-3">(4 món)</p>
+                    <button id="show-tasks-btn" class="w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-md hover:bg-blue-700 transition-colors">
+                        Xem lại danh sách
+                    </button>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-lg font-bold text-dark-green mb-3">Giỏ hàng</h3>
+                    <div id="cart-items" class="space-y-2 text-sm max-h-48 overflow-y-auto">
+                        <p id="cart-placeholder" class="text-gray-500 italic">Giỏ hàng trống</p>
+                    </div>
+                    <button id="finish-btn" class="w-full bg-accent-yellow text-dark-green font-bold py-3 px-4 rounded-md mt-4 hover:opacity-80 transition-opacity">
+                        Hoàn thành & Tính điểm
+                    </button>
+                </div>
+            </aside>
+
+            <section class="lg:col-span-2">
+                <div id="product-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    </div>
+            </section>
+            
+            <aside class="lg:col-span-1 lg:sticky lg:top-28 h-fit hidden lg:block">
+                 <div class="bg-white p-4 rounded-lg shadow-lg">
+                    <h4 class="text-sm font-bold text-gray-500 uppercase mb-2">Quảng cáo</h4>
+                    <a id="banner-ad-link" href="#" class="cursor-pointer">
+                        <div class="[aspect:3/4]"> 
+                            <img src="assets/ad-banner.png" alt="Quảng cáo" class="w-full h-full object-cover rounded-md">
+                        </div>
+                    </a>
+                    <p class="text-xs text-gray-400 mt-2 text-center">Tài trợ bởi "Siêu thị bẫy"</p>
+                 </div>
+            </aside>
+
+        </div>
+    </main>
+    
+    <div id="intro-modal" class="hidden fixed inset-0 z-50 items-center justify-center p-4">
+        <div id="intro-overlay" class="absolute inset-0 bg-gray-900 opacity-75"></div>
+        <div class="relative bg-white rounded-lg shadow-xl w-full max-w-lg p-8">
+            <button id="intro-close-btn-x" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <h3 class="text-3xl font-bold text-dark-green text-center">Chào mừng bạn!</h3>
+            <p class="my-4 text-lg text-gray-700 text-center leading-relaxed">Nhiệm vụ của bạn là đi chợ với ngân sách <strong>500.000 VNĐ</strong>.</p>
+            <div class="bg-gray-100 p-4 rounded-lg text-left">
+                <h4 class="text-lg font-bold text-dark-green mb-3">Danh sách cần mua (Mục tiêu):</h4>
+                <ul class="space-y-2 list-disc list-inside">
+                    <li class="text-gray-700">1. Đồ ăn tối (Thịt/Cá)</li>
+                    <li class="text-gray-700">2. Đồ ăn tối (Rau củ)</li>
+                    <li class="text-gray-700">3. Quà sinh nhật (Sách)</li>
+                    <li class="text-gray-700">4. Ăn vặt (Kem)</li>
+                </ul>
+            </div>
+            <p class="my-4 text-lg text-gray-700 text-center leading-relaxed">Hãy cố gắng hoàn thành mục tiêu và <strong>tránh các bẫy quảng cáo</strong>!</p>
+            <button id="intro-start-btn" class="w-full bg-dark-green text-white font-bold py-3 px-8 rounded-md hover:bg-gray-700 transition-colors">
+                Bắt đầu chơi!
+            </button>
+        </div>
+    </div>
+    
+    <div id="tasks-modal" class="hidden fixed inset-0 z-50 items-center justify-center p-4">
+        <div id="tasks-overlay" class="absolute inset-0 bg-gray-900 opacity-75"></div>
+        <div class="relative bg-white rounded-lg shadow-xl w-full max-w-md p-8">
+            <button id="tasks-close-btn-x" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <h3 class="text-3xl font-bold text-dark-green text-center">Danh sách mục tiêu</h3>
+            <div class="bg-gray-100 p-4 rounded-lg text-left my-6">
+                <ul id="task-list-popup" class="space-y-2 list-disc list-inside">
+                    <li id="task-1-popup" class="text-gray-700">1. Đồ ăn tối (Thịt/Cá)</li>
+                    <li id="task-2-popup" class="text-gray-700">2. Đồ ăn tối (Rau củ)</li>
+                    <li id="task-3-popup" class="text-gray-700">3. Quà sinh nhật (Sách)</li>
+                    <li id="task-4-popup" class="text-gray-700">4. Ăn vặt (Kem)</li>
+                </ul>
+            </div>          
+        </div>
+    </div>
+
+    <div id="game-modal" class="hidden fixed inset-0 z-50 items-center justify-center p-4">
+        <div id="modal-overlay" class="absolute inset-0 bg-gray-900 opacity-75"></div>
+        <div class="relative bg-white rounded-lg shadow-xl w-full max-w-md p-8 text-center">
+            <h3 id="modal-title" class="text-3xl font-bold text-dark-green">Kết quả</h3>
+            <div id="modal-content" class="my-6 space-y-3 text-lg text-gray-700">
+                <p><strong>Tiền tiết kiệm được:</strong> <span id="score-money"></span></g>
+                <p><strong>Mục tiêu hoàn thành:</strong> <span id="score-tasks"></span> / 4</p>
+                <p><strong>Số "bẫy" đã dính:</strong> <span id="score-traps"></span></p>
+                <p id="final-score-text" class="text-xl font-bold text-dark-green mt-4"></p>
+            </div>
+            <button id="modal-close-btn" class="bg-accent-yellow text-dark-green font-bold py-3 px-8 rounded-md hover:opacity-80 transition-colors">
+                Chơi lại
+            </button>
+        </div>
+    </div>
+
+    <div id="ad-modal" class="hidden fixed inset-0 z-50 items-center justify-center p-4">
+        <div id="ad-overlay" class="absolute inset-0 bg-gray-900 opacity-75"></div>
+        <div class="relative bg-white rounded-lg shadow-xl w-full max-w-md overflow-hidden">
+            <div class="absolute top-0 right-0 bg-red-600 text-white font-bold px-4 py-2 rounded-bl-lg z-10">GIẢM 70%</div>
+            <div class="text-center p-8">
+                <h3 class="text-3xl font-bold text-dark-green">ƯU ĐÃI CHỚP NHOÁNG!</h3>
+                <img src="assets/tainghe.jpg" alt="Tai nghe" class="w-1/2 h-auto mx-auto my-4 rounded-lg">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Chỉ dành cho bạn! Tai nghe Bluetooth X-Sound giảm giá cực sốc từ
+                    <span class="line-through text-gray-500">500.000 VNĐ</span>
+                    chỉ còn <span class="font-bold text-red-600 text-xl">150.000 VNĐ</span>!
+                </p>
+                <div class="mt-6 flex flex-col sm:flex-row sm:justify-center gap-4">
+                    <button id="ad-buy-btn" class="bg-red-600 text-white font-bold py-3 px-8 rounded-md hover:bg-red-700 transition-colors">Mua ngay!</button>
+                    <button id="ad-close-btn" class="text-gray-500 font-medium py-3 px-6 rounded-md hover:bg-gray-100 transition-colors">Bỏ qua</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark-green py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <p class="text-gray-300 text-sm text-center">
+                Sản phẩm sáng tạo MLN122 - MC1805 - Group 3 (Hồng Hà - Minh Dũng - Lê Khang - Phạm Lâu - Việt Cường)<br/>
+                Đại học FPT TP.HCM &copy; 2025. All rights reserved.
+            </p>
+        </div>
+    </footer>
+    
+    <script src="game.js" defer></script>
+
+</body>
+</html>

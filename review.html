@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Ôn tập - Chương 2 - Quyền Lực Giỏ Hàng</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 'montserrat': ['Montserrat', 'sans-serif'] },
+                    colors: {
+                        'dark-green': '#2f4841',
+                        'accent-yellow': '#f3b23a'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-montserrat bg-gray-100 text-gray-800 text-left">
+
+    <header class="bg-white border-b border-gray-200 p-4 sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="text-dark-green text-xl font-bold no-underline">Quyền Lực Giỏ Hàng</a>
+            <nav class="flex items-center gap-8">
+                <a href="theory.html" class="no-underline text-gray-800 font-medium hover:text-accent-yellow transition-colors">Lý thuyết (Chương 2)</a>
+                <a href="game.html" class="no-underline text-gray-800 font-medium hover:text-accent-yellow transition-colors">Game "Đi chợ"</a>
+                <a href="quiz.html" class="no-underline text-gray-800 font-medium hover:text-accent-yellow transition-colors">Quiz Tính cách</a>
+                <a href="review.html" class="no-underline text-accent-yellow font-bold transition-colors">Quiz ôn tập</a>
+        </div>
+    </header>
+
+    <main class="max-w-4xl w-full mx-auto py-12 px-6">
+        <div class="text-center mb-10">
+            <h1 class="text-5xl font-black text-dark-green">Quiz Ôn tập Chương 2</h1>
+            <p class="text-xl text-gray-600 mt-4 max-w-2xl mx-auto">Kiểm tra kiến thức về Hàng hóa, Tiền tệ và Thị trường.</p>
+        </div>
+
+        <section id="quiz-container" class="bg-white p-8 rounded-lg shadow-2xl">
+            <div id="quiz-loading" class="text-center p-10">
+                <h3 class="text-xl font-medium text-gray-500">Đang tải câu hỏi...</h3>
+            </div>
+            
+            <div id="quiz-question" class="hidden">
+                <p id="progress-text" class="text-sm font-semibold text-accent-yellow mb-4">Câu 1/10</p>
+                <h2 id="question-text" class="text-2xl font-bold text-dark-green mb-6 leading-relaxed">Đây là nội dung câu hỏi?</h2>
+                
+                <div id="answers-container" class="space-y-4">
+                    </div>
+
+                <div class="mt-8 flex justify-between items-center">
+                    <button id="prev-btn" class="text-gray-500 hover:text-dark-green transition-colors disabled:opacity-50" disabled>
+                        &larr; Quay lại
+                    </button>
+                    <button id="next-btn" class="bg-dark-green text-white font-bold py-3 px-6 rounded-md hover:bg-gray-700 transition-colors disabled:opacity-50">
+                        Tiếp theo &rarr;
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="quiz-results" class="hidden bg-white p-8 rounded-lg shadow-2xl text-center">
+            <h2 class="text-4xl font-black text-dark-green mb-6">Kết quả của bạn</h2>
+            
+            <div id="result-summary" class="bg-gray-100 p-6 rounded-lg mb-6">
+                <p class="text-xl text-gray-700 leading-relaxed mb-3">Bạn đã hoàn thành bài Quiz.</p>
+                <p class="text-4xl font-extrabold text-accent-yellow">
+                    <span id="final-score-display">0</span>/<span id="total-questions">10</span>
+                </p>
+                <p id="final-message" class="mt-4 text-dark-green font-semibold"></p>
+            </div>
+
+            <button id="restart-btn" class="mt-8 bg-accent-yellow text-dark-green font-bold py-3 px-8 rounded-md hover:opacity-80 transition-opacity">
+                Làm lại Quiz
+            </button>
+        </section>
+
+    </main>
+
+    <footer class="bg-dark-green py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <p class="text-gray-300 text-sm text-center">
+                Sản phẩm sáng tạo MLN122 - MC1805 - Group 3 (Hồng Hà - Minh Dũng - Lê Khang - Phạm Lâu - Việt Cường)<br/>
+                Đại học FPT TP.HCM &copy; 2025. All rights reserved.
+            </p>
+        </div>
+    </footer>
+    
+    <script src="review.js" defer></script>
+
+</body>
+</html>
